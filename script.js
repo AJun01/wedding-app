@@ -172,8 +172,6 @@ async function initAerialView(address) {
   });
 
   const API_KEY = process.env.GOOGLE_API_KEY;
-  //you could use mine for now
-  //const API_KEY = 'AIzaSyBTolbJPWtmZ6-tLRU0cgdqMqJPAECujSc'; 
 
   const encodedAddress = encodeURIComponent(address);
 
