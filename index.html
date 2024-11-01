@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Wedding Planner</h1>
+    </header>
+
+    <main>
+        <section id="budget-section">
+            <h2>Wedding Budget</h2>
+            <input type="range" id="budget-slider" min="0" max="100000" step="1000" value="50000">
+            <p>Budget: $<span id="budget-value">50000</span></p>
+        </section>
+
+        <section id="guest-list-section">
+            <h2>Guest List</h2>
+            <form id="guest-form">
+                <div class="form-row">
+                    <label for="guest-number">Number of People (1-2):</label>
+                    <input type="number" id="guest-number" name="guest-number" min="1" max="2" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="guest-name">Full Name:</label>
+                    <input type="text" id="guest-name" name="guest-name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="guest-email">Email:</label>
+                    <input type="email" id="guest-email" name="guest-email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="guest-phone">Phone Number:</label>
+                    <input type="tel" id="guest-phone" name="guest-phone" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="guest-cost">Estimated Cost:</label>
+                    <input type="number" id="guest-cost" name="guest-cost" min="0" required>
+                </div>
+
+                <button type="submit">Add Guest</button>
+            </form>
+
+            <ul id="guest-list"></ul>
+        </section>
+
+        <section id="dinner-options-section">
+            <h2>Dinner Menu Options</h2>
+            <form id="dinner-form">
+                <div class="form-row">
+                    <label for="vegan-cost">Vegan Cost per Guest:</label>
+                    <input type="number" id="vegan-cost" name="vegan-cost" min="0" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="meat-cost">Meat Lovers Cost per Guest:</label>
+                    <input type="number" id="meat-cost" name="meat-cost" min="0" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="seafood-cost">Seafood Lovers Cost per Guest:</label>
+                    <input type="number" id="seafood-cost" name="seafood-cost" min="0" required>
+                </div>
+
+                <button type="submit">Update Dinner Costs</button>
+            </form>
+        </section>
+
+        <section id="location-section">
+            <h2>Wedding Location</h2>
+            <form id="location-form">
+                <div class="form-row">
+                    <label for="location-address">Street Address:</label>
+                    <input type="text" id="location-address" name="location-address" required>
+                </div>
+                <div class="form-row">
+                    <label for="location-city">City:</label>
+                    <input type="text" id="location-city" name="location-city" required>
+                </div>
+                <div class="form-row">
+                    <label for="location-state">State/Province:</label>
+                    <input type="text" id="location-state" name="location-state">
+                </div>
+                <div class="form-row">
+                    <label for="location-zip">ZIP/Postal Code:</label>
+                    <input type="text" id="location-zip" name="location-zip">
+                </div>
+                <div class="form-row">
+                    <label for="location-country">Country:</label>
+                    <input type="text" id="location-country" name="location-country" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="location-cost">Estimated Cost:</label>
+                    <input type="number" id="location-cost" name="location-cost" min="0" required>
+                </div>
+
+                <button type="submit">Update Location</button>
+                <button type="button" id="delete-location">Delete Location</button>
+            </form>
+
+                <!-- a really nice secret feature that must give a try -->
+            <div id="aerial-view-container" style="display:none;">
+                <h3>Aerial View</h3>
+                <div class="container">
+                    <video class="aerial-view-media" muted autoplay loop controls>
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="photographer-section">
+            <h2>Photographer Details</h2>
+            <form id="photographer-form">
+                <div class="form-row">
+                    <label for="photographer-name">Name:</label>
+                    <input type="text" id="photographer-name" name="photographer-name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="photographer-email">Email:</label>
+                    <input type="email" id="photographer-email" name="photographer-email" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="photographer-phone">Phone Number:</label>
+                    <input type="tel" id="photographer-phone" name="photographer-phone" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="photographer-cost">Cost:</label>
+                    <input type="number" id="photographer-cost" name="photographer-cost" min="0" required>
+                </div>
+
+                <button type="submit">Update Photographer</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
